@@ -1,4 +1,4 @@
-''' gym environment based on LOBSTER data '''
+''' gym environment based on a Block Shaped Limit Order Book '''
 __author__ = 'Matthew Reiter'
 __email__ = 'matthew.reiter@mail.utoronto.ca'
 __version__ = '1.0.1'
