@@ -1,3 +1,11 @@
+''' gym environment based on LOBSTER data '''
+__author__ = 'Matthew Reiter'
+__email__ = 'matthew.reiter@mail.utoronto.ca'
+__version__ = '1.0.1'
+__status__ = 'Production'
+__copyright__   = 'Copyright 2020, Applications of Deep Reinforcement Learning, BASc Thesis, University of Toronto'
+
+
 import gym
 import numpy as np
 import pandas as pd
@@ -9,19 +17,6 @@ class MarketEnvironment(gym.Env):
     metadata = {'render.modes': ['human']}
 
     actions = {'SELL': 0, 'HOLD': 1}
-    params = {
-        'forex': 'EURUSD',
-        'data_dir': '/Users/mreiter/Desktop/thesis/deep_rl/trading/block_lob/eurusd',
-        'file_name': 'DAT_ASCII_EURUSD_M1_',
-        'start': 2010,
-        'end': 2015,
-        'offset': 20,
-        'inventory': 100000,
-        'impact': 1e-12,  # 1/141450228.13,
-        'resilience': 100,
-        'tpm_low': 1,
-        'tpm_high': 2
-    }
 
     def __init__(self, params):
         self.start = params['start']
